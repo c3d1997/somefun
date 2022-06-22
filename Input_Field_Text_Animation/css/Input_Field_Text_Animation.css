@@ -1,0 +1,79 @@
+* {
+    font-family: 'Anek Latin', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    grid-gap: 30px;
+    /* 網格行列之間間隙 好用！ */
+    background: rgb(53, 53, 53);
+}
+
+.inputbox {
+    position: relative;
+    width: 250px;
+}
+
+.inputbox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(114, 114, 114);
+    background: rgb(53, 53, 53);
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+}
+
+.inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgb(114, 114, 114);
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+
+/* 第一類 */
+
+
+/* ~ 取代符號 */
+
+
+/* .inputbox input:valid~span,
+.inputbox input:focus~span {
+    color: #00df8a;
+    transform: translateX(10px) translateY(-6px);
+    font-size: 0.65em;
+    padding: 0px 10px;
+    background: rgb(53, 53, 53);
+    border-left: 1px solid #00df8a;
+    border-right: 1px solid #00df8a;
+    border-spacing: 0.2em;
+} */
+
+
+/* 第二類 */
+
+.inputbox input:valid~span,
+.inputbox input:focus~span {
+    color: rgb(53, 53, 53);
+    transform: translateX(10px) translateY(-6px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: #00df8a;
+}
+
+.inputbox input:valid,
+.inputbox input:focus {
+    border: 1px solid #00df8a;
+}
